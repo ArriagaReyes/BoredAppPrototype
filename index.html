@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale-1">
+	<title>Bored app prototype</title>
+	<style>
+            #tasks > li{
+	        cursor: pointer;
+	    }
+	</style>
+    </head>
+    <body>
+	<section id="dashboard">
+	    <h1 id="open-calculator">Calculator</h1>
+            <h1 id="open-manager">Password Manager</h1>
+	    <h1 id="open-tasks">To-do</h1>
+	</section>
+
+        <section id="calculator">
+	    <button class="dash-link">Back</button>
+	    <form>
+	        <label for="first">First Number</label>
+	        <input type="number" id="first">
+                <label for="second">Second Number</label>
+	        <input type="number" id="second">
+	        <div id="sum"></div>
+	        <button id="add" type="submit">Add</button>
+	    </form>
+	</section>
+
+	<section id="to-do">
+	    <button class="dash-link">Back</button>
+	    <h1>Tasks</h1>
+	    <ul id="tasks"></ul>
+	    <form>
+	        <label for="task-input">Task</label>
+		<input id="task-input">
+		<button type="submit">Add Task</button>
+	    </form>
+	   <h1>Done'd</h1>
+	   <ul id="archived"></ul>
+	</section>
+
+	<section id="manager">
+	    <button class="dash-link">Back</button>
+	    <form id="returning-user">
+	        Returning?
+		<button id="registered-yes">YES</button>
+		<button id="registered-no">NO</button>
+	    </form>
+
+	    <form id="new-member">
+		<label for="new password">Enter a custom identification string:</label>
+		<input id="new-id" type="text">
+
+		<label for="new-password">Enter a 6-digit hex passcode:</label>
+		<input id="new-passcode" type="text">
+
+		<button type="submit">Submit</button>
+	    </form>
+
+	    <form id="login">
+		<label for="returning-id">Identification.</label>
+	        <input id="returning-id" type="text">
+		<label for="returning-passcode">Passcode.</label>
+		<input id="returning-passcode" type="text">
+		<button type="submit">Submit</button>
+	    </form>
+
+	    <div id="password-manager">
+	        <h1>Your passwords</h1>
+		<ul id="saved-passwords"></ul>
+
+		<form id="add-password">
+		    <h2>Add Password</h2>
+		    <label for="password-site">Site.</label>
+		    <input id="password-site" type="text">
+		    <label for="password-username">Username.</label>
+		    <input id="password-username" type="text">
+		    <label for="password">Password.</label>
+		    <input id="password" type="text">
+		    <button type="submit">Submit</button>
+		</form>
+	    </div>
+	</section>
+	<script src="./main.js"></script>
+    </body>
+</html>
